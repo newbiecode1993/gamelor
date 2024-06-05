@@ -1,1 +1,46 @@
+import java.util.Scanner;
+
+public class main {
+    private static int choice;
+
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        do {
+            System.out.println("-----------------------------------");
+            System.out.println("| Chọn nhân vật để sử dụng kỹ năng|");
+            System.out.println("|   1: Quách Tĩnh                 |");
+            System.out.println("|   2: Hư Trúc                    |");
+            System.out.println("|   3: Chu Chỉ Nhược              |");
+            System.out.println("|   4: Thoát                      |");
+            System.out.println("-----------------------------------");
+            choice = sc.nextInt();
+
+            switch(choice) {
+                case 1:
+                  //  nhanVat nhanVatBinhThuong = new nhanVat();
+                    CaiBang QuachTinh = new CaiBang();
+                    //nhanVatBinhThuong.tanCong();
+                    QuachTinh.tanCong();
+                    QuachTinh.chiso(25, 100);
+                    break;
+                case 2:
+                    ThieuLam Hutruc = new ThieuLam();
+                    Hutruc.tanCong();
+                    Hutruc.chiso(15, 150);
+                    break;
+                case 3:
+                    NgaMi Chuchi = new NgaMi();
+                    Chuchi.tanCong();
+                    Chuchi.chiso(30, 80);
+                    break;
+                case 4:
+                    System.out.println("Exiting...");
+                    break;
+                default:
+                    System.out.println("Invalid choice. Please try again.");
+            }
+        } while (choice != 4);
+    }
+}
 
